@@ -56,7 +56,7 @@ For example, **sklearn** is a package and **ensemble** is its subpackage. When w
 To test the package, run <code>python setup.py pytest</code>.
 
 ### Building and Publishing the Package
-      * To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file.
-      * To install the package locally, you can run <code>pip install dist/name_of_wheel_file</code>. Then, you can import it in your python files.
-       *To check if your package description is convenient for PyPI, run <code>twine check dist/*</code>.
-To publish your package to PyPI, run <code>twine upload dist/*</code>. You will be required to provide you PyPI username and password. After providing them, your package will be published to PyPI. From now on, anybody can install your package using <code>pip install package_name</code>.
+* To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file.
+* To install the package locally, you can run <code>pip install dist/name_of_wheel_file</code>. Then, you can import it in your python files.
+* To check if your package description is convenient for PyPI, run <code>twine check dist/&ast;</code>.
+* To publish your package to PyPI, run <code>twine upload dist/&ast;</code>. You will be required to provide you PyPI username and password. After providing them, your package will be published to PyPI. From now on, anybody can install your package using <code>pip install package_name</code>.
