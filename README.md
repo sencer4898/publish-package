@@ -62,7 +62,7 @@ This is important for the consistency of your package. Whenever you need to inst
 If you want to go one step further, you can check every version of the packages that you are requiring and instead of writing <code>numpy==1.23.5</code> as dependency, you can write <code>numpy>=1.23.5</code>.
 
 
-### Testing Package
+### Testing the Package
 To test the package, run <code>python setup.py pytest</code>. This will run all the tests inside the test function.
 
 ### Building and Publishing the Package
