@@ -3,7 +3,7 @@ Instructions to publish a Python package using Pycharm and Anaconda Prompt.\
 <br/>
 Instructions are given in the README file. Required directory structure and exemplary contents are given in the repo.\
 <br/>
-This repo is created by following [this](https://medium.com/analytics-vidhya/how-to-create-a-python-library-7d5aea80cc3f) Medium post about how to create a library, [this](https://realpython.com/pypi-publish-python-package/#build-your-package) tutorial about how to publish one, and some extra search.
+This repo is created by following [this](https://medium.com/analytics-vidhya/how-to-create-a-python-library-7d5aea80cc3f) Medium post about how to create a library, [this](https://realpython.com/pypi-publish-python-package/#build-your-package) tutorial about how to publish one, and some extra research.
 
 ## Steps
 ### Virtual Environment
