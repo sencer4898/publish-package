@@ -42,22 +42,22 @@ package_project
         __init__.py
 ```
 
-**README.md** file should include the information about the package. You can leave it empty or explain the basics and purpose of the package as a reference for the users of the package.<br/>
-**setup.py** file includes the metadata of the package, such as version, dependencies, license, etc.<br/>
-**package_name** is the main package folder. This is how the package will be imported, i.e. <code>import package_name</code>. It has modules and subpackages.<br/>
-**\_\_init\_\_.py** file indicates that this folder is a package. When we import a package (not a module), this file can import from modules so that we can use functions/classes of other modules as if they are part of an imaginary module named **package_name**. Also, when we run <code>?package_name</code>, we see the contents of docstring of \_\_init\_\_.py.<br/>
-**module1** is a python file. Modules can have functions, classes, and variables.<br/>
-**subpkg** is a subpackage under our main package. For example, ensemble is a subpackage under sklearn (sklearn.ensemble).<br/>
-**module2.py** is a module under subpackage.<br/>
-**tests** folder includes test module. Test module is used to check if our package produces expected outcomes (for example, using assert to check if a function returns the expected value for specific input values).<br/>
-<br/>
+* **README.md** file should include the information about the package. You can leave it empty or explain the basics and purpose of the package as a reference for the users of the package.
+* **setup.py** file includes the metadata of the package, such as version, dependencies, license, etc.
+* **package_name** is the main package folder. This is how the package will be imported, i.e. <code>import package_name</code>. It has modules and subpackages.
+* **\_\_init\_\_.py** file indicates that this folder is a package. When we import a package (not a module), this file can import from modules so that we can use functions/classes of other modules as if they are part of an imaginary module named **package_name**. Also, when we run <code>?package_name</code>, we see the contents of docstring of \_\_init\_\_.py.
+* **module1** is a python file. Modules can have functions, classes, and variables.<br/>
+* **subpkg** is a subpackage under our main package. For example, ensemble is a subpackage under sklearn (sklearn.ensemble).<br/>
+* **module2.py** is a module under subpackage.
+* **tests** folder includes test module. Test module is used to check if our package produces expected outcomes (for example, using assert to check if a function returns the expected value for specific input values).
+
 For example, **sklearn** is a package and **ensemble** is its subpackage. When we run <code>from sklearn import ensemble</code>, ensemble subpackage is imported. Even though **ensemble** is not a module, we can create an object using <code>ensemble.RandomForestClassifier()</code>. This is because **\_\_init\_\_.py** file of the ensemble subpackage imports this class definition form another module (.\_forest.py).
 
 ### Creating Package
 When creating the package, you should use the virtual environment. In Pycharm, you can click the bottom right button (on the left of lock button) where it says something similar to 'Python 3.x ...'. Then, <code>Add New Interpreter>Add Local Interpreter>Existing>Click Three Dot.</code> Here, you need to locate the virtual environment that we created in the Virtual Environment step.
-<br/>
+<br/><br/>
 This is important for the consistency of your package. Whenever you need to install a package, you should install it to the virtual environment. This way, you will know exactly which versions of which packages your new package is requiring. These will be the dependencies for your package. Also, by using a virtual environment, you ensure that your package is guaranteed to work under these conditions.
-<br/>
+<br/><br/>
 If you want to go one step further, you can check every version of the packages that you are requiring and instead of writing <code>numpy==1.23.5</code> as dependency, you can write <code>numpy>=1.23.5</code>.
 
 
@@ -65,7 +65,7 @@ If you want to go one step further, you can check every version of the packages 
 To test the package, run <code>python setup.py pytest</code>.
 
 ### Building and Publishing the Package
-* To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file.
+* To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file
 * To install the package locally, you can run <code>pip install dist/name_of_wheel_file</code>. Then, you can import it in your python files.
 * To check if your package description is convenient for PyPI, run <code>twine check dist/&ast;</code>.
 * To publish your package to PyPI, run <code>twine upload dist/&ast;</code>. You will be required to provide you PyPI username and password. After providing them, your package will be published to PyPI. From now on, anybody can install your package using <code>pip install package_name</code>.
