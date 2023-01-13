@@ -66,7 +66,7 @@ If you want to go one step further, you can check every version of the packages 
 To test the package, run <code>python setup.py pytest</code>. This will run all the tests inside the test function.
 
 ### Building and Publishing the Package
-* To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file
+* To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file.
 * To install the package locally, you can run <code>pip install dist/name_of_wheel_file</code>. Then, you can import it in your python files.
 * To check if your package description is convenient for PyPI, run <code>twine check dist/&ast;</code>.
 * To publish your package to PyPI, run <code>twine upload dist/&ast;</code>. You will be required to provide you PyPI username and password. After providing them, your package will be published to PyPI. From now on, anybody can install your package using <code>pip install package_name</code>.
