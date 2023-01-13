@@ -54,7 +54,7 @@ package_project
 For example, **sklearn** is a package and **ensemble** is its subpackage. When we run <code>from sklearn import ensemble</code>, ensemble subpackage is imported. Even though **ensemble** is not a module, we can create an object using <code>ensemble.RandomForestClassifier()</code>. This is because **\_\_init\_\_.py** file of the ensemble subpackage imports this class definition form another module (.\_forest.py).
 
 ### Creating Package
-In this step, you will write your own functions and classes inside module files. You should e<br/><br/>
+In this step, you will write your own functions and classes inside module files.<br/><br/>
 When creating the package, you should use the virtual environment. In Pycharm, you can click the bottom right button (on the left of lock button) where it says something similar to 'Python 3.x ...'. Then, <code>Add New Interpreter>Add Local Interpreter>Existing>Three Dot.</code> Here, you need to locate the virtual environment that we created in the Virtual Environment step.
 <br/><br/>
 This is important for the consistency of your package. Whenever you need to install a package, you should install it to the virtual environment. This way, you will know exactly which versions of which packages your new package is requiring. These will be the dependencies for your package. Also, by using a virtual environment, you ensure that your package is guaranteed to work under these conditions.
