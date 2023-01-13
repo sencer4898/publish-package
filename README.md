@@ -54,6 +54,7 @@ package_project
 For example, **sklearn** is a package and **ensemble** is its subpackage. When we run <code>from sklearn import ensemble</code>, ensemble subpackage is imported. Even though **ensemble** is not a module, we can create an object using <code>ensemble.RandomForestClassifier()</code>. This is because **\_\_init\_\_.py** file of the ensemble subpackage imports this class definition form another module (.\_forest.py).
 
 ### Creating Package
+In this step, you will write your own functions and classes inside module files. You should e<br/><br/>
 When creating the package, you should use the virtual environment. In Pycharm, you can click the bottom right button (on the left of lock button) where it says something similar to 'Python 3.x ...'. Then, <code>Add New Interpreter>Add Local Interpreter>Existing>Click Three Dot.</code> Here, you need to locate the virtual environment that we created in the Virtual Environment step.
 <br/><br/>
 This is important for the consistency of your package. Whenever you need to install a package, you should install it to the virtual environment. This way, you will know exactly which versions of which packages your new package is requiring. These will be the dependencies for your package. Also, by using a virtual environment, you ensure that your package is guaranteed to work under these conditions.
@@ -62,7 +63,7 @@ If you want to go one step further, you can check every version of the packages 
 
 
 ### Testing Package
-To test the package, run <code>python setup.py pytest</code>.
+To test the package, run <code>python setup.py pytest</code>. This will run all the tests inside the test function.
 
 ### Building and Publishing the Package
 * To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file
