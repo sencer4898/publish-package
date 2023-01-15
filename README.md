@@ -57,13 +57,13 @@ For example, **sklearn** is a package and **ensemble** is its subpackage. When w
 In this step, you will write your own functions and classes inside module files.<br/><br/>
 When creating the package, you should use the virtual environment. In Pycharm, you can click the bottom right button (on the left of lock button) where it says something similar to 'Python 3.x ...'. Then, <code>Add New Interpreter>Add Local Interpreter>Existing>Three Dot.</code> Here, you need to locate the virtual environment that we created in the Virtual Environment step.
 <br/><br/>
-This is important for the consistency of your package. Whenever you need to install a package, you should install it to the virtual environment. This way, you will know exactly which versions of which packages your new package is requiring. These will be the dependencies for your package. Also, by using a virtual environment, you ensure that your package is guaranteed to work under these conditions.
+This is important for the consistency of your package. Whenever you need to install a package, you should install it to the virtual environment. This way, you will know exactly which versions of which packages your new package requires. These will be the dependencies for your package. Also, by using a virtual environment, you ensure that your package is guaranteed to work under these conditions.
 <br/><br/>
 If you want to go one step further, you can check every version of the packages that you are requiring and instead of writing <code>numpy==1.23.5</code> as dependency, you can write <code>numpy>=1.23.5</code>.
 
 
 ### Testing the Package
-To test the package, run <code>python setup.py pytest</code>. This will run all the tests inside the test function.
+To test the package, run <code>python setup.py pytest</code>. This will run all the tests inside the tests folder.
 
 ### Building and Publishing the Package
 * To build the package, run <code>python setup.py sdist bdist_wheel</code>. This will create two files under the **dist** file: one wheel file and one tar.gz file.
